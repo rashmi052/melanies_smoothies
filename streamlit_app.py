@@ -9,7 +9,7 @@ st.write(
   """Choose the fruit you want in your custom smoothie.
   """
 )
-import streamlit as st
+
 
 name_on_order = st.text_input("Name on Smoothie:")
 st.write("Name on your Smoothie will be:",name_on_order)
@@ -23,8 +23,8 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 #st.stop()
 
 pd_df=my_dataframe.to_pandas()
-st.dataframe(pd_df)
-st.stop()
+#st.dataframe(pd_df)
+#st.stop()
 
 
 ingredients_list = st.multiselect(
